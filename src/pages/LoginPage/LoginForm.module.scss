@@ -1,0 +1,5 @@
+@use '../../variables' as var;
+
+.LoginForm {
+    padding: var.$contentMargin+px;
+}

@@ -1,0 +1,7 @@
+@use '../../variables' as var;
+
+.Panel {
+    background-color: var.$panelBackgroundColor;
+    box-shadow: var.$shadowSize+px var.$shadowSize+px var.$shadowSize+px 0 rgba(0, 0, 0, 0.025);
+    border-radius: var.$borderRadius+px;
+}

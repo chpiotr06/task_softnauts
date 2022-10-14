@@ -1,0 +1,31 @@
+@use '../../variables' as var;
+
+$headerHeight:              88px;
+
+.DefaultLayout {
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    padding: 0 var.$contentMargin+px;
+    gap: var.$contentMargin+px;
+    height: $headerHeight;
+    background-color: var.$panelBackgroundColor;
+    box-shadow: 0 var.$shadowSize+px var.$shadowSize+px 0 rgba(0, 0, 0, 0.025);
+
+    .logo {
+        height: 36px;
+        width: auto;
+    }
+
+    .nav {
+        flex: 1;
+    }
+}
+
+.content {
+    margin-top: (var.$shadowSize*4)+px;
+}
