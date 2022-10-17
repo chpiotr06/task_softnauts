@@ -14,7 +14,7 @@ $headerHeight:              88px;
     gap: var.$contentMargin+px;
     height: $headerHeight;
     background-color: var.$panelBackgroundColor;
-    box-shadow: 0 var.$shadowSize+px var.$shadowSize+px 0 rgba(0, 0, 0, 0.025);
+    box-shadow: 0 var.$shadowSize+px var.$shadowSize+px 0 rgba(0, 0, 0, var.$shadowOpacity);
 
     .logo {
         height: 36px;
@@ -26,6 +26,14 @@ $headerHeight:              88px;
     }
 }
 
+.messagesContainer {
+
+}
+
 .content {
     margin-top: (var.$shadowSize*4)+px;
+}
+
+.userData {
+
 }

@@ -1,5 +1,7 @@
 @use './variables' as var;
+@import "./typography";
 
 body {
     background-color: var.$backgroundColor;
+    font-family: Poppins, sans-serif;
 }

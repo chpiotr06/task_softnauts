@@ -1,0 +1,38 @@
+@use '../../variables' as var;
+@use 'sass:math';
+
+.NotificationMessage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var.$contentMargin+px;
+    padding: math.div(var.$contentMargin, 2)+px var.$contentMargin+px;
+    .body {
+        flex: 1;
+        text-transform: uppercase;
+    }
+    .close {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+}
+
+.error {
+    background-color: var.$colorError;
+    color: var.$colorErrorText;
+    .close {
+        color: var.$colorErrorText;
+    }
+}
+
+.success {
+    background-color: var.$colorSuccess;
+    color: var.$colorSuccessText;
+}
+
+.info {
+    background-color: var.$colorInfo;
+    color: var.$colorInfoText;
+}

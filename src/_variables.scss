@@ -1,5 +1,14 @@
 $colorWhite:                #FFFFFF;
 $colorLightSilver:          #F8F9FA;
+$colorSilver:               #7E94A2;
+
+$colorError:                #C94F4F;
+$colorInfo:                 #D4E2EA;
+$colorSuccess:              #44998F;
+
+$colorErrorText:            $colorWhite;
+$colorInfoText:             $colorSilver;
+$colorSuccessText:          $colorWhite;
 
 $backgroundColor:           $colorLightSilver;
 $panelBackgroundColor:      $colorWhite;
@@ -7,4 +16,5 @@ $panelBackgroundColor:      $colorWhite;
 $contentMargin:             26;
 
 $shadowSize:                4;
+$shadowOpacity:             0.05;
 $borderRadius:              4;
