@@ -24,7 +24,11 @@ function LoginPage() {
 
     }).catch((error) => {
 
-      // TODO: catch errors and pass appropriate feedback to user.
+      /**
+       * TODO: catch errors and pass appropriate feedback to user.
+       * TODO: whole part 2
+      */
+
 
     });
   }
