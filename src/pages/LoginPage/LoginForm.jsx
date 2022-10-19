@@ -1,9 +1,10 @@
+import { useRef, useState }  from 'react';
+import PropTypes from "prop-types";
+import { Link } from 'react-router-dom';
+
 import css from './LoginForm.module.scss';
 import errorSVG from '../../assets/shape.svg';
 import Panel from "../../components/Panel";
-import PropTypes from "prop-types";
-import { useRef, useState }  from 'react';
-import { Link } from 'react-router-dom';
 
 function LoginForm({onLoginAttempt, errorMessage}) {
 
