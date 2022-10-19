@@ -1,14 +1,24 @@
 import css from './LoginForm.module.scss';
+import errorSVG from '../../assets/shape.svg';
+import logoSoftnauts from '../../assets/logo-softnauts.svg';
+
 import Panel from "../../components/Panel";
 import PropTypes from "prop-types";
 import { useRef, useState }  from 'react';
 import { Link } from 'react-router-dom';
 
-function LoginForm({onLoginAttempt}) {
+function LoginForm({onLoginAttempt, errorMessage}) {
 
   const passwordElement = useRef(null);
   const [ password, setPassword ] = useState('');
   const [ email, setEmail ] = useState('');
+
+  const error = (
+    <div className={css.errorWrapper}>
+      <img src={errorSVG} alt="Exclamation sign"></img>
+      <div>{errorMessage}</div>
+    </div>
+    )
 
   const sendAttempt = () => {
     setPassword('');
@@ -26,10 +36,6 @@ function LoginForm({onLoginAttempt}) {
     }
   }
 
-  /** 
-   * TODO: add code for displaying login errors
-   */
-
   return (
     <Panel className={css.LoginForm}>
       <form>
@@ -44,8 +50,10 @@ function LoginForm({onLoginAttempt}) {
             value={email} 
             onChange={event => setEmail(event.target.value)}
             onKeyDown={handleMail} 
+            style={ errorMessage ? {borderColor: "#C94F4F"} : null}
           />
-
+          {errorMessage ? error : null}
+          
           <div className={css.flexRowSpaceBetween}>
             <label htmlFor="password">Password</label>
             <div className={css.blueUnderline}>
@@ -61,7 +69,9 @@ function LoginForm({onLoginAttempt}) {
             value={password} 
             onChange={event => setPassword(event.target.value)} 
             onKeyDown={handlePassword}
+            style={ errorMessage ? {borderColor: "#C94F4F"} : null}
           />
+          {errorMessage ? error : null}
 
           <input 
             type="submit" 

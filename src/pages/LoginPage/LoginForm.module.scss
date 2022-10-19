@@ -120,7 +120,22 @@ input[type="submit"] {
     flex-direction: column;
     align-items: center;
 }
-
+.errorWrapper{
+    display: flex;
+    margin-top: 8px;
+    img{
+        width: 15px;
+        margin-right: 6px;
+    }
+    div{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: #C94F4F;
+    }
+}
 @media only screen and (max-width: 400px){
     .LoginForm {
         margin-top: 10px;
