@@ -1,7 +1,5 @@
 import css from './LoginForm.module.scss';
 import errorSVG from '../../assets/shape.svg';
-import logoSoftnauts from '../../assets/logo-softnauts.svg';
-
 import Panel from "../../components/Panel";
 import PropTypes from "prop-types";
 import { useRef, useState }  from 'react';
@@ -21,6 +19,7 @@ function LoginForm({onLoginAttempt, errorMessage}) {
     )
 
   const sendAttempt = () => {
+    onLoginAttempt(email, password)
     setPassword('');
     setEmail('');
   }
