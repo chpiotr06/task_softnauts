@@ -8,9 +8,8 @@
 
 form{
     padding: 80px 80px 0 80px;
-    
 }
-// TODO: Your code
+
 legend {
     font-family: 'Poppins';
     font-style: normal;
@@ -81,6 +80,7 @@ input[type="submit"] {
     justify-content: space-between;
     padding-top: 24px;
     padding-bottom: 8px;
+    align-items: flex-end;
 }
 .blueUnderline{
     font-family: 'Poppins';
@@ -119,4 +119,10 @@ input[type="submit"] {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media only screen and (max-width: 400px){
+    .LoginForm {
+        margin-top: 10px;
+    }
 }
